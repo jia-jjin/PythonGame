@@ -1,6 +1,6 @@
 import random
 
-def guess():
+def number_guessing_game():
     print("Welcome to the number guessing game!")
     print("I will be picking a random number between 1 and 100 (inclusive).")
     print("Type in a random number and I will tell whether it's higher or lower!")
@@ -18,4 +18,4 @@ def guess():
     print("Congrats! You nailed it!")
     print("Here\'s some candy 🍭🍬")
 
-guess()
+number_guessing_game()
