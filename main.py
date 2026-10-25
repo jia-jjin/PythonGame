@@ -1,4 +1,5 @@
 import number_guessing_game
+import word_guessing_game
 
 def welcome():
     print("=========================================")
@@ -7,8 +8,7 @@ def welcome():
     print("=========================================")
     print("Pick a category:")
     print("1. Numbers")
-    print("2. Algorithms")
-    print("3. Words")
+    print("2. Words")
     print("0. More coming soon!")
 
 while True:
@@ -16,3 +16,5 @@ while True:
     option = int(input())
     if (option == 1):
         number_guessing_game()
+    elif (option == 2):
+        word_guessing_game()

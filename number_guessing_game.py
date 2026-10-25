@@ -17,5 +17,3 @@ def number_guessing_game():
 
     print("Congrats! You nailed it!")
     print("Here\'s some candy 🍭🍬")
-
-number_guessing_game()
