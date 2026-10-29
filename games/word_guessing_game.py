@@ -2,6 +2,7 @@ from constants import kindergarten_words, letters
 import random
 
 def word_guessing_game():
+    print("--------- WORD GUESSING GAME ---------")
     print("Welcome to the Word Guessing Game!")
     print("I will be choosing a random word for you to guess!")
     print("If the letter you guessed is in the word, all the position of the matching letters will be revealed,")
@@ -35,6 +36,7 @@ def word_guessing_game():
                     print("HIT!")
                 print("Current word: " + "".join(shown_word))
                 print("Current lives: " + "❤️ " * lives + "💔" * (5-lives))
+                print("Letters guessed: " + ', '.join([k for k,v in letters.items() if v == 0]))
                 # print(selected_word)
             else:
                 print("Already guessed!")
