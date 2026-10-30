@@ -6,6 +6,7 @@ import tkinter as tk
 class eTurtle(turtle.Turtle):
     dir = 'up'
     last_dir = 'up'
+    new = True
 
 def snake_game():
     global direction, score, high_score, screen_width, screen_height, x_offset, y_offset, x_food, y_food, ongoing, game_end
@@ -134,6 +135,14 @@ def snake_game():
         if (left-x_offset>=0 or right-x_offset <= 0 or top-y_offset >= 0 or bottom-y_offset <= 0):
             game_over()
 
+        # check for head touching own body or not
+        for segment in segments:
+            if segment.position() == (0,0) and not segment.new:
+                game_over()
+
+
+        
+
     def welcome():
         global direction
         sc.setup(
@@ -223,6 +232,8 @@ def snake_game():
         # sc.bye()
         # turtle.done()
 
+    sc.getcanvas().winfo_toplevel().protocol("WM_DELETE_WINDOW", exit_game)
+
     def main_loop():
         global score
 
@@ -254,6 +265,7 @@ def snake_game():
                     segments[i].goto(x-STEPS,y)
             segments[i].last_dir = segments[i].dir
             segments[i].dir = last_dir
+            segments[i].new = False
 
 
         # if snake takes food
@@ -319,6 +331,7 @@ def snake_game():
                 segments[0].goto(-STEPS,0)
         segments[0].last_dir = segments[0].dir
         segments[0].dir = direction
+        segments[0].new = False
 
     sc.listen()
     sc.onkeypress(go_up, "w")

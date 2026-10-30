@@ -12,7 +12,9 @@ def number_guessing_game():
 
     while (guess != target):
         guess = int(input("Enter a number: "))
-        if (guess > target):
+        if (guess > 100 or guess < 1):
+            print("Pick a number from 1 to 100 only!")
+        elif (guess > target):
             print("Lower!")
         elif (guess < target):
             print("Higher!")

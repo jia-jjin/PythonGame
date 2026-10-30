@@ -48,3 +48,4 @@ def word_guessing_game():
             return
         
     print("Congrats on beating this game! try again plews?")
+    print("Remaining lives: " + "❤️ " * lives + "💔" * (5-lives))

@@ -12,6 +12,7 @@ def welcome():
     print("1. Number Guessing")
     print("2. Word Guessing")
     print("3. Snake Game")
+    print("4. Ship Warrior (Plane Shooter)")
     print("0. End conversation")
 
 def game_end():
