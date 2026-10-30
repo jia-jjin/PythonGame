@@ -1,5 +1,6 @@
 from games.number_guessing_game import number_guessing_game
 from games.word_guessing_game import word_guessing_game
+from games.snake_game import snake_game
 import time
 
 def welcome():
@@ -7,9 +8,10 @@ def welcome():
     print("Welcome to the collection of mini-games!")
     print("protip: This is meant to be a fun side-project, please do not mind the minor bugs and grammatical errors")
     print("=========================================")
-    print("Pick a category:")
-    print("1. Numbers")
-    print("2. Words")
+    print("Pick a game:")
+    print("1. Number Guessing")
+    print("2. Word Guessing")
+    print("3. Snake Game")
     print("0. End conversation")
 
 def game_end():
@@ -30,6 +32,8 @@ while True:
             number_guessing_game()
         case 2:
             word_guessing_game()
+        case 3:
+            snake_game()
         case 0:
             print("Thank you for playing!")
             break
