@@ -137,16 +137,17 @@ tips to earn a high score: kill enemies and protect teammates!
 PythonGame/
 ├── main.py
 ├── constants.py
+├── README.md
+├── resource_path.py
+├── screenshot_0.png
+├── screenshot_1.png
+├── sigma.gif
 └── games/
     ├── number_guessing_game.py
     ├── snake_game.py
     ├── word_guessing_game.py
     └── ship_warrior/
-        ├── ship.py
-        └── sigma.gif
-└── static/
-    ├── screenshot.png
-    └── sigma.gif
+        └── ship.py
 ```
 
 ## Notes/Disclaimer
