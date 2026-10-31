@@ -144,6 +144,9 @@ PythonGame/
     └── ship_warrior/
         ├── ship.py
         └── sigma.gif
+└── static/
+    ├── screenshot.png
+    └── sigma.gif
 ```
 
 ## Notes/Disclaimer
