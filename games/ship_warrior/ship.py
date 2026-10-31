@@ -2,6 +2,7 @@ import turtle
 import math
 import random
 import os.path
+from resource_path import resource_path
 
 def ship_warrior():
     SCREEN_WIDTH = 800
@@ -16,7 +17,8 @@ def ship_warrior():
     wn.title("Ship Warrior (HARD)")
     wn.bgcolor("navy")
     wn.tracer(0)
-    wn.bgpic(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../../static/sigma.gif"))
+    # wn.bgpic(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../../static/sigma.gif"))
+    wn.bgpic(resource_path("sigma.gif"))
 
     def exit_game():
         global game_end
