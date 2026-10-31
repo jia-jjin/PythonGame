@@ -341,11 +341,8 @@ def snake_game():
     sc.onkeypress(exit_game, "Escape")
 
     welcome()
-    try:
-        while not game_end:
-            if (direction != "stop"):
-                main_loop()
-    except (turtle.Terminator, tk.TclError):
-        pass
+    while not game_end:
+        if (direction != "stop"):
+            main_loop()
     sc.reset()
     sc.bye()

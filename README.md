@@ -1,6 +1,6 @@
 # Python Mini-Game Collection
 
-A small collection of mini-games written in Python! Fun games from the 80's and 90's including Ship Warrior (Plane Shooter), Snake Game, Word Guesser and Number Guesser that can be selected through a simple GUI menu.
+A small collection of mini-games written in Python! Fun games from the 80's and 90's including Ship Warrior, Snake Game, Word Guesser and Number Guesser that can be selected through a simple GUI menu.
 
 ## Requirements
 
@@ -82,7 +82,7 @@ protip: Just use "binary search" technique. [Search it up](https://www.geeksforg
 
 ### 3. Snake Game
 
-The Snake Game opens in a separate window, and the window moves following the snake's movement.
+Snake Game opens in a separate window, and the window moves following the snake's movement.
 
 **Controls**
 
@@ -101,7 +101,35 @@ The Snake Game opens in a separate window, and the window moves following the sn
 - The score is shown on the head of the snake.
 - Press **Esc** or close the window to exit the game anytime.
 
-### 4. Ship Warrior (Plane Shooter)
+### 4. Ship Warrior
+
+Ship Warrior opens in a separate window.
+
+**Controls**
+
+| Key | Description |
+|---|---|
+| `Space` | Fire bullets |
+| `W` | Accelerate forward |
+| `A` | Rotate anticlockwise / left |
+| `S` | Brake |
+| `D` | Rotate clockwise / right |
+| `E` | Start the game |
+| `Esc` | Exit |
+
+- On the start screen, press E to proceed with the game.
+- Move the ship through the map using WASD. Touching the barrier bounces you off.
+- There are three and only three types of entities in this game:
+    - **Black triangle** - Player. This is You.
+    - **Squares** - Enemies. They shoot bullets, so make sure you get around their attacks to shoot at them. Here are the different types:
+        - **Red**: Comes for you aggressively to shoot at you.
+        - **Yellow**: Stays put and does not move. Serves as a landmine, so watch where you're going!
+        - **Purple**: They are the surveillance that goes as far away as possible from you to stay alive.
+    - **Blue circle** - Teammates. They are on the same team as you, which deals damage to the enemies. Shooting at them deducts your scores!
+- The score, lives remaining and current level is shown on the head of the snake.
+- Press **Esc** or close the window to exit the game anytime.
+
+tips to earn a high score: kill enemies and protect teammates!
 
 ## Project structure
 
@@ -114,9 +142,8 @@ PythonGame/
     ├── snake_game.py
     ├── word_guessing_game.py
     └── ship_warrior/
-        ├── import_turtle.py
-        ├── seabackground.gif
-        └── ship.py
+        ├── ship.py
+        └── sigma.gif
 ```
 
 ## Notes/Disclaimer
