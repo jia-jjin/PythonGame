@@ -16,7 +16,7 @@ def ship_warrior():
     wn.title("Ship Warrior (HARD)")
     wn.bgcolor("navy")
     wn.tracer(0)
-    wn.bgpic(os.path.join(os.path.abspath(os.path.dirname(__file__)), "./sigma.gif"))
+    wn.bgpic(os.path.join(os.path.abspath(os.path.dirname(__file__)), "../../static/sigma.gif"))
 
     def exit_game():
         global game_end
@@ -476,7 +476,7 @@ def ship_warrior():
         def __init__(self, x, y, shape, color):
             Sprite.__init__(self, x, y, shape, color)
             self.state = "ready"
-            self.thrust = 8.0
+            self.thrust = 5.0
             self.max_fuel = 200
             self.fuel = self.max_fuel
             self.height = 4
@@ -745,7 +745,7 @@ def ship_warrior():
             
             # Fire enemy missiles
             for enemy_missile in enemy_missiles:
-                if enemy_missile.state == "ready":
+                if enemy_missile.state == "ready" and random.random() < 0.02:
                     # Fire the missile
                     # Find all enemies
                     enemies = []

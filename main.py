@@ -66,7 +66,7 @@ protip: Just use "binary search" technique.
 3. If you happen to repeat the same letter in the following guesses, the game is kind enough to remind you and stop you from doing so (without costing any heart).
 4. Once you have reached the end of the game, there's only two possible outcomes:
     - You guessed the word. Your remaining hearts will be shown.
-    - You couldn't guess the word (me 90\% of the time). The game asks you to play again
+    - You couldn't guess the word (me 90% of the time). The game asks you to play again
 """)
         case 3:
             print("=========================================")
